@@ -1,9 +1,12 @@
 "use strict"; // Enable strict mode for better error checking
 
-// #0: Listen for page load
-window.addEventListener("load", initApp); // When the page is loaded, run initApp function
+function sayHello() {
+  const name = document.querySelector("input").value;
 
-// #1: Initialize the app
-function initApp() {
-  console.log("initApp: app.js is running 🎉"); // Log to the console that the app is running
+  const h3 = document.querySelector("h3");
+  const text = "Hej " + name;
+
+  h3.textContent = text;
 }
+
+document.querySelector("button").addEventListener("click", sayHello);
